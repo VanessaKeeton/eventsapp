@@ -13,7 +13,6 @@
 /** Native CSS Vars **/
 // default theme
 :root {
-  --heading-font-family: #{$headingFontFamily};
   --body-font-family: #{$bodyFontFamily};
   --base-font-color: #{$baseFontColor};
   --base-font-size: #{$baseFontSize}px;
