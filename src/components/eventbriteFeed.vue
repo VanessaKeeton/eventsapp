@@ -11,7 +11,9 @@
         <span v-if="event.venue.address.address_1">{{ event.venue.address.address_1 }}</span><br>
         <span v-if="event.venue.address.address_2">{{ event.venue.address.address_2 }}</span>
       </address>
-      <div :class="$style.purchaseLinkContainer"><ev-link :href="`${event.url}?aff=website`" target="_blank" asButton>Purchase Tickets</ev-link></div>
+      <div :class="$style.purchaseLinkContainer">
+        <ev-link :href="`${event.url}?aff=website`" target="_blank" asButton>Purchase Tickets</ev-link>
+      </div>
     </li>
     <li v-if="loading">loading...</li>
   </ul>
