@@ -1,5 +1,5 @@
 <template>
-  <component :is="`h${ semanticLevel }`" :class="$style[displayAs]" ><slot></slot></component>
+  <component :is="`h${ semanticLevel }`" :class="[$style[displayAs], `evHeader`]" ><slot></slot></component>
 </template>
 
 <script>
@@ -27,10 +27,25 @@ export default {
 </script>
 
 <style lang="scss" module>
+.heading1 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-one-font-size);
+  line-height: var(--heading-one-line-height);
+  margin: var(--heading-one-margin);
+}
+.heading2 {
+  font-family: var(--heading-font-family);
+  font-size: var(--heading-two-font-size);
+  line-height: var(--heading-two-line-height);
+  margin: var(--heading-two-margin);
+}
+</style>
+
+<style lang="scss">
 @use '../assets/styles/_functions';
 @use '../assets/styles/_themeVars';
 
-:root {
+.evHeader {
   --heading-font-family: #{themeVars.$headingFontFamily};
 
   --heading-one-font-size: #{functions.fontSize(themeVars.$headingOneSize)};
@@ -41,17 +56,4 @@ export default {
   --heading-two-line-height: #{themeVars.$headingTwoLineHeight};
   --heading-two-margin: #{themeVars.$headingTwoMargin};
 }
-
-  .heading1 {
-    font-family: var(--heading-font-family);
-    font-size: var(--heading-one-font-size);
-    line-height: var(--heading-one-line-height);
-    margin: var(--heading-one-margin);
-  }
-  .heading2 {
-    font-family: var(--heading-font-family);
-    font-size: var(--heading-two-font-size);
-    line-height: var(--heading-two-line-height);
-    margin: var(--heading-two-margin);
-  }
 </style>
