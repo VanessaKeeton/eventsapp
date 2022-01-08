@@ -1,0 +1,10 @@
+@use 'themeVars';
+
+@function toRem($value) {
+  $remValue: ($value / themeVars.$baseFontSize) + rem; 
+  @return $remValue;
+}
+
+@function fontSize($value) {
+  @return toRem($value);
+}

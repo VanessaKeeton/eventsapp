@@ -1,0 +1,15 @@
+@use 'themeVars' as *;
+
+:root {
+  --button-background: #{$buttonBackground};
+  --button-font-size: #{$buttonFontSize};
+  --button-font-color: #{$buttonFontColor};
+  --button-padding: #{$buttonPadding};
+}
+
+.button {
+  background-color: var(--button-background);
+  font-size: var(--button-font-size);
+  color: var(--button-font-color);
+  padding: var(--button-padding);
+}
