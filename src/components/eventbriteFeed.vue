@@ -27,7 +27,7 @@ import EvLink from './link'
 import prettyDate from '../filters/prettyDate'
 
 export default {
-  name: `eventbrightFeed`,
+  name: `eventbriteFeed`,
   components: {
     EvHeader,
     EvLink
