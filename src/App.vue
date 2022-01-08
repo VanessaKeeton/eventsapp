@@ -17,14 +17,16 @@
   --body-font-family: #{$bodyFontFamily};
   --base-font-color: #{$baseFontColor};
   --base-font-size: #{$baseFontSize}px;
-  --app-background-color: #{$appBackgroundColor}
+  --app-background-color: #{$appBackgroundColor};
+  --primary-branding-color:#{$primaryBrandingColor};
+  --secondary-branding-color:#{$secondaryBrandingColor};
 }
 
 // dark theme
 @media (prefers-color-scheme: dark) {
   :root {
   --base-font-color: #{$baseFontColorDark};
-  --app-background-color: #{$appBackgroundColorDark}
+  --app-background-color: #{$appBackgroundColorDark};
   }
 }
 body {

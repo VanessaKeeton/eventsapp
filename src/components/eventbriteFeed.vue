@@ -6,7 +6,7 @@
       <img :src="event.logo.url" alt="">
       <ev-header :semanticLevel="3" displayAs="heading2">{{ event.name.text }}</ev-header>
       <p :class="$style.eventDescription">{{ event.description.text }}</p>
-      <address>
+      <address :class="$style.eventAddress">
         <span>{{ event.venue.name }}</span><br>
         <span v-if="event.venue.address.address_1">{{ event.venue.address.address_1 }}</span><br>
         <span v-if="event.venue.address.address_2">{{ event.venue.address.address_2 }}</span>
@@ -103,7 +103,7 @@ export default {
 .eventDate {
   margin-bottom: .5em;
   font-size: 14px;
-  color: rgb(223, 139, 29);
+  color: var(--primary-branding-color);
   font-weight: 400;
   letter-spacing: .25pt;
 }
@@ -111,5 +111,9 @@ export default {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
+}
+.eventAddress {
+    font-size: 12px;
+    color: var(--primary-branding-color);
 }
 </style>
