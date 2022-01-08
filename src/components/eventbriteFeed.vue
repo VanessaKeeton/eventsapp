@@ -33,7 +33,6 @@ export default {
   setup() {
     const events = ref(null);
     const loading = ref(true);
-    // const prettyDate = prettyDate();
 
     const eventsToRequest = function () {
       return new Promise((resolve, reject) => {
